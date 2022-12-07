@@ -13,6 +13,11 @@ for y in s:
         y[x] = int(y[x])
 
 # print(s)
+test = []
+for z in range(len(s)):
+    # print(s)
+    s[z] = (sum(s[z]))
 
-print(s)
-# print(max(sum(z) for z in s))
+s.sort(reverse=True)
+
+print(s[0])
