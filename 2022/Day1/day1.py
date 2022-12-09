@@ -10,7 +10,6 @@ for y in s:
     for x in range(len(y)):
         y[x] = int(y[x])
 
-test = []
 for z in range(len(s)):
     s[z] = (sum(s[z]))
 
