@@ -9,11 +9,36 @@ with open("2022/Day2/input.txt") as f:
 # draw = 3
 # win = 6
 
-print(s)
+s = s.strip().split("\n")
+for x in range(len(s)):
+    s[x] = s[x].split(" ")
 
-s = s.strip().split("\n\n")
+# print(s)
 
-# for y in range(len(s)):
-    # s[y] = s[y].split("\n")
+def partone(s):
+    p = 0
+    for a,b in s:
+        if b == "X":
+            p += 1
+            if a == "A":
+                p += 3
+            elif a == "C":
+                p += 6
+        elif b == "Y":
+            p += 2
+            if a == "A":
+                p += 6
+            elif a == "B":
+                p += 3
+        elif b == "Z":
+            p += 3
+            if a == "B":
+                p += 6
+            elif a == "C":
+                p += 3
+    return p
 
-print(s)
+print(partone(s))
+        
+# Part Two
+
